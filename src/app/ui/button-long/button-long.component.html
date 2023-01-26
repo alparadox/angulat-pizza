@@ -1,0 +1,10 @@
+<button type='button'
+        [ngClass]="{
+        'button': colorOrange,
+        'button--black': colorBlack
+        }">
+  <span *ngIf='arrowIsShow'>
+    <img src='assets/img/grey-arrow-left.svg'>
+  </span>
+  <span>{{textOnButton}}</span>
+</button>
