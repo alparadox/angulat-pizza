@@ -7,21 +7,40 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ButtonLongComponent implements OnInit {
 
-  @Input() arrowIsShow: boolean = false;
   @Input() textOnButton: string = 'Вернуться назад';
-  @Input() type: 'primary' | 'secondary' | 'outline' = 'primary';
-  iconSrc: string = 'assets/img/grey-arrow-left.svg';
+  @Input() type: 'primary' | 'secondary' | 'outline' | 'ghost' = 'primary';
+  iconSrc: string = '';
+  arrowIsShow: boolean = false;
+  basketIsShow: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.showIcon();
+    this.changeIconBack()
   }
 
-  changeIcon(): void {
-    this.iconSrc = 'assets/img/grey-arrow-left-hover.svg'
+  public changeIcon(): void {
+    if (this.type === 'outline') {
+      this.iconSrc = 'assets/img/grey-arrow-left-hover.svg'
+    } else if (this.type === 'ghost') {
+      this.iconSrc = 'assets/img/trash-hover.svg'
+    }
   }
 
-  changeIconBack(): void {
-    this.iconSrc = 'assets/img/grey-arrow-left.svg'
+  public changeIconBack(): void {
+    if (this.type === 'outline') {
+      this.iconSrc = 'assets/img/grey-arrow-left.svg'
+    } else if (this.type === 'ghost') {
+      this.iconSrc = 'assets/img/trash.svg'
+    }
+  }
+
+  private showIcon(): void {
+    if (this.type === 'outline') {
+      this.arrowIsShow = true;
+    } else if (this.type === 'ghost') {
+      this.basketIsShow = true;
+    }
   }
 }

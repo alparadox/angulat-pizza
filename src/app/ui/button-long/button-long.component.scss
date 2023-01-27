@@ -70,4 +70,30 @@
       background-color: darken($orange, 8%);
     }
   }
+
+  &-ghost {
+    background: none;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: $light-grey;
+    display: flex;
+    &,
+    span {
+      color: $light-grey;
+
+      &,
+      img {
+        margin-right: 4px;
+
+      }
+    }
+
+    &:hover {
+      &,
+      span {
+        color: $black;
+      }
+    }
+  }
 }

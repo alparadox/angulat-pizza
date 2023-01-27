@@ -5,9 +5,10 @@
         [ngClass]="{
         'button-primary': type === 'primary',
         'button-secondary': type === 'secondary',
-        'button-outline': type === 'outline'
+        'button-outline': type === 'outline',
+        'button-ghost': type === 'ghost'
         }">
-  <span *ngIf='arrowIsShow'>
+  <span *ngIf='arrowIsShow || basketIsShow'>
     <img [src]="iconSrc">
   </span>
   <span>{{textOnButton}}</span>
