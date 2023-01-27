@@ -1,10 +1,14 @@
 <button type='button'
+        class="button"
+        (mouseover)="changeIcon()"
+        (mouseout)="changeIconBack()"
         [ngClass]="{
-        'button': colorOrange,
-        'button--black': colorBlack
+        'button-primary': type === 'primary',
+        'button-secondary': type === 'secondary',
+        'button-outline': type === 'outline'
         }">
   <span *ngIf='arrowIsShow'>
-    <img src='assets/img/grey-arrow-left.svg'>
+    <img [src]="iconSrc">
   </span>
   <span>{{textOnButton}}</span>
 </button>
