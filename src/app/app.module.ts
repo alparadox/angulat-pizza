@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './ui/button/button.component';
 import { ButtonCartComponent } from './ui/button-cart/button-cart.component';
+import { SwitchComponent } from './ui/switch/switch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonComponent,
-    ButtonCartComponent
+    ButtonCartComponent,
+    SwitchComponent
   ],
   imports: [
     BrowserModule,
