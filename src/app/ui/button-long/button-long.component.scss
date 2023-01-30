@@ -96,4 +96,39 @@
       }
     }
   }
+
+  &-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    padding: 0;
+    border: 2px solid $orange;
+    background-color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+    &,
+    span {
+      color: $orange;
+    }
+
+    &-delete {
+      border: 2px solid $grey-del;
+      rotate: 45deg;
+      &,
+      span {
+        color: $grey-del;
+      }
+      &:hover {
+        border: 2px solid $black;
+        &,
+        span {
+          color: $black;
+        }
+      }
+    }
+  }
 }

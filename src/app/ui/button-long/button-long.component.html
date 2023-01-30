@@ -6,7 +6,9 @@
         'button-primary': type === 'primary',
         'button-secondary': type === 'secondary',
         'button-outline': type === 'outline',
-        'button-ghost': type === 'ghost'
+        'button-ghost': type === 'ghost',
+        'button-circle': type === 'circle' || type === 'circle-delete',
+        'button-circle-delete': type === 'circle-delete'
         }">
   <span *ngIf='arrowIsShow || basketIsShow'>
     <img [src]="iconSrc">
