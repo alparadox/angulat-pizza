@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ButtonLongComponent implements OnInit {
 
   @Input() textOnButton: string = 'Вернуться назад';
-  @Input() type: 'primary' | 'secondary' | 'outline' | 'ghost' | 'circle' | 'circle-delete'= 'primary';
+  @Input() type: 'primary' | 'secondary' | 'outline' | 'ghost' | 'circle' | 'circle-delete'| 'add' | 'add-count' = 'primary';
   iconSrc: string = '';
   arrowIsShow: boolean = false;
   basketIsShow: boolean = false;

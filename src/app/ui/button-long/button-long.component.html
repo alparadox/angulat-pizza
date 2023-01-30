@@ -8,10 +8,14 @@
         'button-outline': type === 'outline',
         'button-ghost': type === 'ghost',
         'button-circle': type === 'circle' || type === 'circle-delete',
-        'button-circle-delete': type === 'circle-delete'
+        'button-circle-delete': type === 'circle-delete',
+        'button-add': type === 'add' || type === 'add-count',
+        'button-add-wide': type === 'add-count'
         }">
   <span *ngIf='arrowIsShow || basketIsShow'>
     <img [src]="iconSrc">
   </span>
+  <span class='plus' *ngIf="type==='add'|| type === 'add-count'">+&nbsp;</span>
   <span>{{textOnButton}}</span>
+  <i *ngIf="type==='add-count'">12</i>
 </button>
