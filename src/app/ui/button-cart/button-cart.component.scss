@@ -1,0 +1,47 @@
+@import 'src/assets/variables';
+
+.button {
+  font-family: "Proxima Nova";
+  font-weight: 700;
+  font-size: 16px;
+  min-width: 140px;
+  line-height: 19px;
+  height: 50px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color $duration ease-in-out, border-color $duration ease-in-out;
+  border: 1px solid transparent;
+  background-color: $orange;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  span {
+    color: #fff;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    background-color: darken($orange, 12%);
+  }
+
+  &:hover {
+    background-color: darken($orange, 8%);
+  }
+}
+
+.delimiter {
+    width: 1px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+.count-product {
+  position: relative;
+  bottom: 2px;
+  padding-left: 8px;
+}

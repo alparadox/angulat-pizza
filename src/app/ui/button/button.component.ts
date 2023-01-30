@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ButtonComponent implements OnInit {
 
   @Input() textOnButton: string = 'Вернуться назад';
+  @Input() countGood: number = 0;
   @Input() type: 'primary' | 'secondary' | 'outline' | 'ghost' | 'circle' | 'circle-delete'| 'add' | 'add-count' = 'primary';
   iconSrc: string = '';
   arrowIsShow: boolean = false;
