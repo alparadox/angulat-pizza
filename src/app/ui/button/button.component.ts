@@ -1,11 +1,11 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-button-long',
-  templateUrl: './button-long.component.html',
-  styleUrls: ['./button-long.component.scss']
+  selector: 'app-button',
+  templateUrl: './button.component.html',
+  styleUrls: ['./button.component.scss']
 })
-export class ButtonLongComponent implements OnInit {
+export class ButtonComponent implements OnInit {
 
   @Input() textOnButton: string = 'Вернуться назад';
   @Input() type: 'primary' | 'secondary' | 'outline' | 'ghost' | 'circle' | 'circle-delete'| 'add' | 'add-count' = 'primary';
