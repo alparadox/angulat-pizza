@@ -1,0 +1,20 @@
+<div class="product-container">
+  <img  [src]="srcImg"
+        class="product-img">
+
+  <p class="product-title">{{titleProduct}}</p>
+
+  <div class="switch-container">
+    <app-switch [items]="dough"></app-switch>
+    <app-switch [items]="sizes"></app-switch>
+  </div>
+
+  <div class="button-container">
+    <p class="price">от {{priceProduct}}&#8381;</p>
+    <app-button [type]="typeButton"
+                [textOnButton]="'Добавить '"
+                [countGood]="countGood"
+                (click)="onAddItem()"
+    ></app-button>
+  </div>
+</div>

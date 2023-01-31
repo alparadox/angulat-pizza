@@ -15,7 +15,7 @@
   <span *ngIf='arrowIsShow || basketIsShow'>
     <img [src]="iconSrc">
   </span>
-  <span class='plus' *ngIf="type==='add'|| type === 'add-count'">+&nbsp;</span>
+  <span class='plus' *ngIf="type === 'add'|| type === 'add-count'">+&nbsp;</span>
   <span>{{textOnButton}}</span>
   <i *ngIf="type==='add-count'">{{countGood}}</i>
 </button>

@@ -1,0 +1,44 @@
+@import 'src/assets/variables';
+
+.switch-container {
+  max-width: 280px;
+  max-height: 85px;
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  padding: 6px;
+}
+
+.product {
+  &-container {
+    max-width: 280px;
+  }
+
+  &-img {
+    max-width: 260px;
+    max-height: 260px;
+  }
+
+  &-title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Proxima Nova';
+    font-weight: 800;
+    font-size: 20px;
+    color: $black;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.price {
+  font-family: 'Proxima Nova';
+  font-weight: 700;
+  font-size: 22px;
+  color: $black;
+  margin: 0;
+}
