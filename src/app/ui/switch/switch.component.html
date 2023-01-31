@@ -1,16 +1,9 @@
-<div class="container">
-  <div class="switch">
+<div class="switch">
     <ul class="switch-list">
-      <li class="switch-items switch-active">тонкое</li>
-      <li class="switch-items">традиционное</li>
+      <li *ngFor="let item of items"
+          [ngClass]="{'switch-active': selectedItem.id === item.id}"
+          (click)="selectItem(item)"
+          class="switch-items"
+          >{{item.label}}</li>
     </ul>
-  </div>
-
-  <div class="switch">
-    <ul class="switch-list">
-      <li class="switch-items switch-active">26 см.</li>
-      <li class="switch-items">30 см.</li>
-      <li class="switch-items">40 см.</li>
-    </ul>
-  </div>
 </div>
