@@ -1,0 +1,44 @@
+@import 'src/assets/variables';
+
+.list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.item {
+  list-style-type: none;
+  background-color: #f9f9f9;
+  padding: 13px 30px;
+  border-radius: 30px;
+  margin-right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+  color: #2C2C2C;
+
+  &:hover {
+    background-color: darken(#f9f9f9, 2%);
+    color: #2C2C2C;
+  }
+
+  &:active {
+    background-color: darken(#f9f9f9, 5%);
+    color: #2C2C2C;
+  }
+
+  &-active {
+    background-color: #282828;
+    color: #fff;
+
+    &:hover {
+      background-color: darken(#282828, 2%);
+      color:  #fff;
+    }
+
+    &:active {
+      background-color: darken(#282828, 5%);
+      color:  #fff;
+    }
+  }
+}

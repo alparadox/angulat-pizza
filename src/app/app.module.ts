@@ -7,6 +7,8 @@ import { ButtonComponent } from './ui/button/button.component';
 import { ButtonCartComponent } from './ui/button-cart/button-cart.component';
 import { SwitchComponent } from './ui/switch/switch.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { SortComponent } from './ui/sort/sort.component';
+import { FilterComponent } from './ui/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     ButtonComponent,
     ButtonCartComponent,
     SwitchComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    SortComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
