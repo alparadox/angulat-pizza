@@ -2,18 +2,18 @@
 
   <div class="sort-label">
 
-  <img class="sort-icon" src="assets/img/sort.svg">
+    <img class="sort-icon" src="assets/img/sort.svg">
 
-  <p class="sort-text">Сортировка по:
-    <span class="sort-selected">популярности</span>
-  </p>
+    <p class="sort-text">Сортировка по:
+      <span class="sort-selected">популярности</span>
+    </p>
   </div>
 
   <div class="sort-popup">
     <ul class="sort-list">
-      <li class="sort-list-item active">популярности</li>
-      <li>цене</li>
-      <li>алфавиту</li>
+      <li *ngFor="let item of sort"
+          class="sort-list-item"
+      >{{item}}</li>
     </ul>
   </div>
 </div>

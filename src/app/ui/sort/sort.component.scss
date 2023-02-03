@@ -2,6 +2,7 @@
 
 .sort {
   position: relative;
+  max-width: 280px;
   &-label {
     display: flex;
     align-items: center;
@@ -9,40 +10,53 @@
 
   &-selected {
     color: $orange;
-    border-bottom: 1px dashed $orange;
+    border-bottom: 1px solid $orange;
     cursor: pointer;
+    margin-left: 6px;
   }
 
   &-text {
-    margin-right: 8px;
+    margin-left: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #2C2C2C;
   }
 
   &-icon {}
 
   &-popup {
+    display: block;
     position: absolute;
-    right: 0;
-    margin-top: 15px;
+    top: 32px;
+    left: 90px;
+    margin-top: 10px;
     background: #ffffff;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.09);
     border-radius: 10px;
     overflow: hidden;
-    padding: 10px 0;
     width: 160px;
   }
 
-  list {
+  &-list {
     overflow: hidden;
-    &-item {
-      padding: 12px 20px;
-      cursor: pointer;
+    padding: 13px 0 10px 0;
+    margin: 0;
 
-      &.active,
+    &-item {
+      cursor: pointer;
+      list-style-type: none;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #000000;
+      padding: 10px 0 11px 14px;
+
+      &-active,
       &:hover {
         background: rgba(254, 95, 30, 0.05);
       }
 
-      &.active {
+      &-active {
         font-weight: bold;
         color: $orange;
       }

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SortComponent implements OnInit {
 
+  sort: any = ["популярности", "цене", "алфавиту"];
+
   constructor() { }
 
   ngOnInit(): void {
