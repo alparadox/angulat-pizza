@@ -2,18 +2,25 @@
 
   <div class="sort-label">
 
-    <img class="sort-icon" src="assets/img/sort.svg">
+    <img [ngClass]="{'sort-icon': showSort}"
+         src="assets/img/sort.svg">
 
     <p class="sort-text">Сортировка по:
-      <span class="sort-selected">популярности</span>
+      <span (click)="showSort = !showSort"
+            [innerHTML]="selectedItem.label"
+            class="sort-selected"></span>
     </p>
   </div>
 
-  <div class="sort-popup">
+  <div *ngIf="showSort"
+       class="sort-popup">
     <ul class="sort-list">
-      <li *ngFor="let item of sort"
+      <li *ngFor="let item of items"
+          [innerHTML]="item.label"
+          (click)="selectItem(item)"
+          [ngClass]="{'sort-list-item-active': selectedItem.id === item.id}"
           class="sort-list-item"
-      >{{item}}</li>
+      ></li>
     </ul>
   </div>
 </div>

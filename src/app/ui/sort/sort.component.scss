@@ -22,7 +22,9 @@
     color: #2C2C2C;
   }
 
-  &-icon {}
+  &-icon {
+    transform: rotate(180deg);
+  }
 
   &-popup {
     display: block;
