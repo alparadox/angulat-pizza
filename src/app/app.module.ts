@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonComponent } from './ui/button/button.component';
@@ -9,6 +8,7 @@ import { SwitchComponent } from './ui/switch/switch.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { SortComponent } from './ui/sort/sort.component';
 import { FilterComponent } from './ui/filter/filter.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { FilterComponent } from './ui/filter/filter.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

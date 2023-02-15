@@ -1,5 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {DOUGH, SIZES, SwitchButton} from "../../data";
+import {DOUGH, SIZES} from "../../data";
+import {SwitchButton} from "../../interfaces/switch-button";
+import {IPizza} from "../../interfaces/pizza";
+import {PizzaType} from "../../enums/pizza-type";
 
 @Component({
   selector: 'app-product-card',
@@ -7,11 +10,10 @@ import {DOUGH, SIZES, SwitchButton} from "../../data";
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent implements OnInit {
-  @Input() titleProduct = 'АХАХА ПЭТСА'
-  @Input() priceProduct: number = 0;
-  @Input() srcImg: string = 'assets/img/nophoto.jpg';
-  dough: SwitchButton[] = DOUGH;
-  sizes: SwitchButton[] = SIZES;
+  @Input() card!: IPizza;
+  dough: SwitchButton[] = [...DOUGH] ;
+  availableDoughs: PizzaType[] = [PizzaType.Thin, PizzaType.Traditional];
+  sizes: SwitchButton[] = JSON.parse(JSON.stringify(SIZES));
   countGood: number = 0;
   typeButton:  'primary' | 'secondary' | 'outline' | 'ghost' | 'circle' | 'circle-delete'| 'add' | 'add-count'  = 'add';
 

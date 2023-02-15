@@ -1,9 +1,11 @@
 <div class="switch">
-    <ul class="switch-list">
-      <li *ngFor="let item of items"
-          [ngClass]="{'switch-active': selectedItem.id === item.id}"
-          (click)="selectItem(item)"
-          class="switch-items"
-          >{{item.label}}</li>
-    </ul>
+    <div class="switch-list">
+      <button *ngFor="let item of items"
+              [ngClass]="{'switch-active': selectedItem && (selectedItem.id === item.id)}"
+              [disabled]="!item.enabled"
+              (click)="selectItem(item)"
+              class="switch-items"
+              type="button"
+              >{{item.label}}</button>
+    </div>
 </div>

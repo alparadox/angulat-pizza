@@ -1,35 +1,34 @@
-export interface SwitchButton {
-  label: string;
-  id: number;
-  disabled?: boolean;
-}
-
+import {PizzaType} from "./enums/pizza-type";
+import {SwitchButton} from "./interfaces/switch-button";
+import {PizzaSize} from "./enums/pizza-size";
 
 export const DOUGH: SwitchButton[] = [
   {
     label: 'тонкое',
-    id: 0,
+    id: PizzaType.Thin,
+    enabled: true
   },
   {
     label: 'традиционное',
-    id: 1,
+    id: PizzaType.Traditional,
+    enabled: true
   },
 ];
 
 export const SIZES: SwitchButton[] = [
   {
     label: '26 см.',
-    id: 2,
-    disabled: true
+    id: PizzaSize.Small,
+    enabled: true
   },
   {
     label: '30 см.',
-    id: 3,
-    disabled: true
+    id: PizzaSize.Medium,
+    enabled: true
   },
   {
     label: '40 см.',
-    id: 4,
-    disabled: true
+    id: PizzaSize.Big,
+    enabled: true
   },
 ];

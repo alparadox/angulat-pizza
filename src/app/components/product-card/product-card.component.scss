@@ -1,7 +1,7 @@
 @import 'src/assets/variables';
 
 .switch-container {
-  max-width: 280px;
+  min-width: 273px;
   max-height: 85px;
   border-radius: 10px;
   background-color: #f3f3f3;
@@ -41,4 +41,9 @@
   font-size: 22px;
   color: $black;
   margin: 0;
+}
+
+.margin-top {
+  display: block;
+  margin-top: 8px;
 }
