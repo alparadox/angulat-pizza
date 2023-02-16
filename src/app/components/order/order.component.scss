@@ -1,0 +1,70 @@
+@import 'src/assets/variables';
+
+.product{
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 821px;
+    font-family: 'Proxima Nova';
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+  }
+
+  &-wrapper-good {
+    display: flex;
+  }
+
+  &-wrapper-button {
+    display: flex;
+    align-items: center;
+  }
+
+  &-text-wrapper {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  &-title {
+    margin: 0;
+  }
+
+  &-option {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #8D8D8D;
+    margin: 3px 0 0 0;
+  }
+
+  &-count {
+    min-width: 38px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  &-price {
+    min-width: 244px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+}
+
+.liner {
+  background: #F4F4F4;
+  width: 820px;
+  height: 1px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

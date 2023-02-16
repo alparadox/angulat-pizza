@@ -1,0 +1,23 @@
+<div class="liner"></div>
+<div class="product-container">
+  <div class="product-wrapper-good">
+    <img  [src]="card.imageUrl"
+          class="product-img">
+
+    <div class="product-text-wrapper">
+      <p class="product-title">{{card.title}}</p>
+      <p class="product-option">{{optionProduct}}</p>
+    </div>
+  </div>
+
+  <div class="product-wrapper-button">
+    <app-button [type]="'circle'" [textOnButton]="'+'"></app-button>
+    <p class="product-count">{{countProduct}}</p>
+    <app-button [type]="'circle'" [textOnButton]="'—'"></app-button>
+
+    <p class="product-price">{{card.price}}  ₽</p>
+
+    <app-button [type]="'circle-delete'" [textOnButton]="'+'"></app-button>
+  </div>
+
+</div>

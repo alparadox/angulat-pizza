@@ -9,6 +9,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { SortComponent } from './ui/sort/sort.component';
 import { FilterComponent } from './ui/filter/filter.component';
 import {HttpClientModule} from "@angular/common/http";
+import { CartComponent } from './components/cart/cart.component';
+import { OrderComponent } from './components/order/order.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {HttpClientModule} from "@angular/common/http";
     SwitchComponent,
     ProductCardComponent,
     SortComponent,
-    FilterComponent
+    FilterComponent,
+    CartComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
