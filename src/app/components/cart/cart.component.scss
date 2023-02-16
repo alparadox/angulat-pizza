@@ -1,0 +1,53 @@
+@import 'src/assets/variables';
+
+.cart {
+  &-icon {
+    width: 29px;
+    height: 29px;
+  }
+  &-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: #000000;
+    margin: 0 0 0 18px;
+  }
+  &-count {
+    font-weight: 700;
+  }
+
+  &-sum {
+    font-weight: 700;
+    color: #FE5F1E;
+  }
+
+  &-button {
+    position: absolute;
+    right: -31px;
+    top: 5px;
+  }
+}
+
+.wrapper {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    position: relative;
+  }
+  &-footer {}
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 22px;
+    color: #000000;
+    margin-top: 20px;
+  }
+  &-buttons {}
+}
+
+.container {
+  max-width: 821px;
+}
