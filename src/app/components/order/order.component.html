@@ -22,7 +22,9 @@
 
     <p class="product-price">{{card.price}}  ₽</p>
 
-    <app-button [type]="'circle-delete'" [textOnButton]="'+'"></app-button>
+    <app-button [type]="'circle-delete'"
+                (click)="deleteProduct(card.id)"
+                [textOnButton]="'+'"></app-button>
   </div>
 
 </div>

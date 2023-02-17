@@ -17,14 +17,18 @@ export class OrderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  decrease(): number {
+  public decrease(): number {
     if (this.countProduct < 0) {
       this.disabled = true;
     };
     return this.countProduct = this.countProduct - 1;
   }
 
-  increase(): number {
+  public increase(): number {
     return this.countProduct = this.countProduct + 1;
+  }
+
+  public deleteProduct(cardId: number): void {
+    console.log('удаление элемента с id: ',cardId)
   }
 }
