@@ -11,9 +11,14 @@
   </div>
 
   <div class="product-wrapper-button">
-    <app-button [type]="'circle'" [textOnButton]="'—'"></app-button>
+    <app-button [type]="'circle'"
+                [textOnButton]="'—'"
+                [disabled]="countProduct <= 0"
+                (buttonClick)="decrease()"></app-button>
     <p class="product-count">{{countProduct}}</p>
-    <app-button [type]="'circle'" [textOnButton]="'+'"></app-button>
+    <app-button [type]="'circle'"
+                [textOnButton]="'+'"
+                (buttonClick)="increase()"></app-button>
 
     <p class="product-price">{{card.price}}  ₽</p>
 

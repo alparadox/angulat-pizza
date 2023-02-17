@@ -2,6 +2,8 @@
         class="button"
         (mouseover)="changeIcon()"
         (mouseout)="changeIconBack()"
+        [disabled]="disabled"
+        (click)="onButtonClick()"
         [ngClass]="{
         'button-primary': type === 'primary',
         'button-secondary': type === 'secondary',

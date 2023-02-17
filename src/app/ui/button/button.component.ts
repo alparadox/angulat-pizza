@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -9,7 +9,10 @@ export class ButtonComponent implements OnInit {
 
   @Input() textOnButton: string = 'Вернуться назад';
   @Input() countGood: number = 0;
+  @Input() disabled: boolean = false;
   @Input() type: 'primary' | 'secondary' | 'outline' | 'ghost' | 'circle' | 'circle-delete'| 'add' | 'add-count' = 'primary';
+
+  @Output() buttonClick = new EventEmitter<void>();
   iconSrc: string = '';
   arrowIsShow: boolean = false;
   basketIsShow: boolean = false;
@@ -43,5 +46,9 @@ export class ButtonComponent implements OnInit {
     } else if (this.type === 'ghost') {
       this.basketIsShow = true;
     }
+  }
+
+  public onButtonClick() {
+    this.buttonClick.emit();
   }
 }

@@ -110,6 +110,18 @@
     font-weight: bold;
     font-size: 20px;
 
+    &:disabled {
+      border: 2px solid $grey-del;
+      cursor: auto;
+      &,
+      span {
+        color: $grey-del;
+      }
+      &:active {
+        transform: none;
+      }
+    }
+
     &,
     span {
       color: $orange;
