@@ -11,6 +11,7 @@ import { FilterComponent } from './ui/filter/filter.component';
 import {HttpClientModule} from "@angular/common/http";
 import { CartComponent } from './components/cart/cart.component';
 import { OrderComponent } from './components/order/order.component';
+import { CartEmptyComponent } from './components/cart-empty/cart-empty.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { OrderComponent } from './components/order/order.component';
     SortComponent,
     FilterComponent,
     CartComponent,
-    OrderComponent
+    OrderComponent,
+    CartEmptyComponent
   ],
   imports: [
     BrowserModule,
