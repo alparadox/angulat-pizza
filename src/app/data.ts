@@ -32,3 +32,21 @@ export const SIZES: SwitchButton[] = [
     enabled: true
   },
 ];
+
+export enum Categories {
+  Meat,
+  Vegan,
+  Grill,
+  Hot,
+  Closed
+}
+
+export const CATEGORIES: Map<Categories, string> = new Map([
+  [Categories.Meat, 'Мясные'],
+  [Categories.Vegan, 'Вегетарианская'],
+  [Categories.Grill, 'Гриль'],
+  [Categories.Hot, 'Острые'],
+  [Categories.Closed, 'Закрытые'],
+]);
+
+

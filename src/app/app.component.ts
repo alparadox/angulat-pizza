@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {PizzaService} from "./pizza.service";
 import {IPizza} from "./interfaces/pizza";
 import {Observable} from "rxjs";
+import {Categories, CATEGORIES} from "./data";
 
 @Component({
   selector: 'app-root',
@@ -19,5 +20,6 @@ export class AppComponent {
   }
 
   ngOnInit() {
+    console.log(CATEGORIES.get(Categories.Meat))
   }
 }

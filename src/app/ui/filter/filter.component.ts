@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {PizzaService} from "../../pizza.service";
 
 @Component({
   selector: 'app-filter',
@@ -10,9 +11,12 @@ export class FilterComponent implements OnInit {
   @Input() selectedItem: any = 'Все';
   mock: any = ['Все', 'Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
 
-  constructor() { }
+  constructor(
+    private pizzaService: PizzaService
+  ) { }
 
   ngOnInit(): void {
+    this.pizzaService.filter = 'ololol';
   }
 
   public selectItem(item: any) {
