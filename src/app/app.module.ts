@@ -12,6 +12,9 @@ import {HttpClientModule} from "@angular/common/http";
 import { CartComponent } from './components/cart/cart.component';
 import { OrderComponent } from './components/order/order.component';
 import { CartEmptyComponent } from './components/cart-empty/cart-empty.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ListComponent } from './list/list.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { CartEmptyComponent } from './components/cart-empty/cart-empty.component
     FilterComponent,
     CartComponent,
     OrderComponent,
-    CartEmptyComponent
+    CartEmptyComponent,
+    HeaderComponent,
+    ListComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

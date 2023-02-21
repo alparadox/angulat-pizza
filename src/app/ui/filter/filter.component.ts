@@ -20,5 +20,10 @@ export class FilterComponent implements OnInit {
       return;
     }
     this.selectedItem = item;
+    this.filterProduct(item);
+  }
+
+  private filterProduct(item: any): void {
+    console.log(item, 'filter')
   }
 }

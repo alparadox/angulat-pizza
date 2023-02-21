@@ -1,27 +1,30 @@
-<div class="container">
-  <div class="wrapper-header">
-    <div>
-     <img src="assets/img/cart.svg" class="cart-icon">
-     <span class="cart-title">Корзина</span>
+<app-header [isCart]="false"></app-header>
+<div class="container-page">
+  <div class="container">
+    <div class="wrapper-header">
+      <div>
+        <img src="assets/img/cart.svg" class="cart-icon">
+        <span class="cart-title">Корзина</span>
+      </div>
+      <div class="cart-button">
+        <app-button [type]="'ghost'" [textOnButton]="'Очистить корзину'" routerLink="/cart-empty"></app-button>
+      </div>
     </div>
-    <div class="cart-button">
-      <app-button [type]="'ghost'" [textOnButton]="'Очистить корзину'"></app-button>
-    </div>
-  </div>
 
-  <ng-container *ngIf="items$ | async as pizzas">
-    <app-order *ngFor="let item of pizzas.slice(1, 3)"
-               [card]="item"></app-order>
-  </ng-container>
+    <ng-container *ngIf="items$ | async as pizzas">
+      <app-order *ngFor="let item of pizzas.slice(1, 3)"
+                 [card]="item"></app-order>
+    </ng-container>
 
-  <div class="wrapper-footer">
-    <div class="wrapper-info">
-      <p>Всего пицц: <span class="cart-count">{{productCount}} шт.</span></p>
-      <p>Сумма заказа: <span class="cart-sum">{{productSum}} ₽</span></p>
-    </div>
-    <div class="wrapper-info">
-      <app-button [type]="'outline'"></app-button>
-      <app-button [type]="'primary'" [textOnButton]="'Оплатить сейчас'"></app-button>
+    <div class="wrapper-footer">
+      <div class="wrapper-info">
+        <p>Всего пицц: <span class="cart-count">{{productCount}} шт.</span></p>
+        <p>Сумма заказа: <span class="cart-sum">{{productSum}} ₽</span></p>
+      </div>
+      <div class="wrapper-info">
+        <app-button [type]="'outline'" routerLink="''"></app-button>
+        <app-button [type]="'primary'" [textOnButton]="'Оплатить сейчас'"></app-button>
+      </div>
     </div>
   </div>
 </div>

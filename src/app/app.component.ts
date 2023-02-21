@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Sort, SORTING} from "./sort";
 import {PizzaService} from "./pizza.service";
 import {IPizza} from "./interfaces/pizza";
 import {Observable} from "rxjs";
@@ -11,7 +10,6 @@ import {Observable} from "rxjs";
 })
 export class AppComponent {
   title = 'angular-pizza';
-  sort: Sort[] = SORTING;
   items$: Observable<IPizza[]>;
 
   constructor(

@@ -50,4 +50,11 @@
 
 .container {
   max-width: 821px;
+  margin-top: 135px;
+
+  &-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

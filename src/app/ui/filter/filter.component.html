@@ -1,7 +1,7 @@
-<ul class="list">
-  <li *ngFor="let item of mock"
+<div class="list">
+  <a *ngFor="let item of mock"
       class="item"
       [ngClass]="{'item-active': selectedItem === item}"
       (click)="selectItem(item)"
-  >{{item}}</li>
-</ul>
+  >{{item}}</a>
+</div>

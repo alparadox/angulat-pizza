@@ -1,0 +1,8 @@
+<div class="product-wrapper">
+    <ng-container *ngIf="items$ | async as pizzas">
+        <app-product-card *ngFor="let item of pizzas"
+                          [card]="item"
+                          class="product-card"
+        ></app-product-card>
+    </ng-container>
+</div>

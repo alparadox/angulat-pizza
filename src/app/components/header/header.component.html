@@ -1,0 +1,12 @@
+<div class="header-wrapper">
+  <div class="header-right-block">
+    <img src="assets/img/pizza-logo.svg" class="header-logo">
+    <div>
+      <p class="header-title">angular pizza</p>
+      <p class="header-text">самая вкусная пицца во вселенной</p>
+    </div>
+  </div>
+  <ng-container  *ngIf="isCart">
+    <app-button-cart routerLink="cart"></app-button-cart>
+  </ng-container>
+</div>

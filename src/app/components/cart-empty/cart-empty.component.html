@@ -1,7 +1,8 @@
+<app-header [isCart]="false"></app-header>
 <div class="empty-wrapper">
   <p class="empty-title">Корзина пустая</p>
   <p class="empty-text">Вероятней всего, вы не заказывали ещё пиццу.</p>
   <p class="empty-text">Для того, чтобы заказать пиццу, перейди на главную страницу.</p>
   <img class="empty-img" src="assets/img/cart-empty.svg">
-  <app-button [type]="'secondary'"></app-button>
+  <app-button [type]="'secondary'" routerLink="''"></app-button>
 </div>
